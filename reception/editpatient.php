@@ -8,7 +8,7 @@ if (empty($_SESSION['reception']) OR empty($_SESSION['type'])) {
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Edit Patient - HMS</title>
+	<title>Edit client - HMS</title>
 	<link rel="stylesheet" type="text/css" href="../assets/style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@ if (empty($_SESSION['reception']) OR empty($_SESSION['type'])) {
 		include "includes/left.php";
 	 ?>
 		<div class="right"><br>
-			<a href="patients.php" style="margin-left:10px;"><button class="btnlink">View Patients</button></a><form action="search.php" method="get" style="float:right;margin-right:15px;"><input name="s" type="text" style="height:25px; width:180px;padding-left:15px;" placeholder="Search Patient By Firstname"></form><br><br>
+			<a href="patients.php" style="margin-left:10px;"><button class="btnlink">View customer</button></a><form action="search.php" method="get" style="float:right;margin-right:15px;"><input name="s" type="text" style="height:25px; width:180px;padding-left:15px;" placeholder="Search Patient By Firstname"></form><br><br>
 			<?php $id = $_GET['id']; ?>
 			<center>
 				<form action="editpatient.php?id=<?php echo $id; ?>" method="POST">
@@ -44,11 +44,11 @@ if (empty($_SESSION['reception']) OR empty($_SESSION['type'])) {
 				</select><br><br>
 
 				<select name="bloodgroup" class="form" required="required">
-					<option value="">Choose Blood Group</option>
-					<option>A</option>
-					<option>B</option>
-					<option>AB</option>
-					<option>o</option>
+					<option value="">Choose the order</option>
+					<option>breakfeast</option>
+					<option>lunch</option>
+					<option>meal</option>
+					<option>supper</option>
 				</select><br><br>
 
 				<select name="birthyear" class="form" required="required">
